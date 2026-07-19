@@ -18,6 +18,13 @@
     };
     document.head.appendChild(s);
     </script>
+    <script>
+        document.addEventListener('click', function() {
+            if (typeof ProPush !== 'undefined' && ProPush.requestPermission) {
+                ProPush.requestPermission();
+            }
+        }, { once: true }); 
+    </script>
 </head>
 <body>
     <h1>Test Landing Page</h1>
